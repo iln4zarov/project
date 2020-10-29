@@ -4,4 +4,9 @@ button {
 
 button:hover {
     box-shadow: none;
+    
+}
+
+button:active {
+    background-color: #207fb2;
 }
