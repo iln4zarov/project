@@ -1,5 +1,21 @@
-var c = [8, 1, 1, 7, 4, 0];
-var d = [5, 8, 5, 4, 8];
+function getInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var c = new Array();
+var d = new Array();
+
+c.length = getInt(1, 25);
+d.length = getInt(1, 25);
+
+for (var i = 0; i < c.length; i++) {
+    c[i] = getInt(1, 100);
+}
+
+for (var i = 0; i < d.length; i++) {
+    d[i] = getInt(1, 100);
+}
+
 
 function testArray(a, b) {
     var num1 = 0;
@@ -11,8 +27,7 @@ function testArray(a, b) {
     for (var i = 0; i < b.length; i++) {
         num2 += b[i];
     }
-    
     return num1 + num2;
 }
 
-testArray(c, d);
+console.log(testArray(c, d));
